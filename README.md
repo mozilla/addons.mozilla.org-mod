@@ -1,2 +1,2 @@
 # addons.mozilla.org-mod
-An atempt to easily refresh AMO.
+An attempt to easily refresh AMO.
