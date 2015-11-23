@@ -51,7 +51,7 @@
   }
   .site-title a:before {
       content: "";
-      background-image: url("https: //mozorg.cdn.mozilla.net/media/img/firefox/family/nav-sprite7-high-res.25f40fe41fe2.png");
+      background-image: url("https://mozorg.cdn.mozilla.net/media/img/firefox/family/nav-sprite7-high-res.25f40fe41fe2.png");
       background-size: 70px 182px;
       width: 70px;
       height: 73px;
@@ -126,7 +126,7 @@
       font: inherit;
   }
   button.search-button {
-      background-image: url("https: //addons.cdn.mozilla.net/static/img/icons/go-arrow.png?ad8fa66"),linear-gradient(#6FBF4A, #6FBF4A);
+      background-image: url("https://addons.cdn.mozilla.net/static/img/icons/go-arrow.png?ad8fa66"),linear-gradient(#6FBF4A, #6FBF4A);
       border-radius: 0;
       box-shadow: none;
   }
