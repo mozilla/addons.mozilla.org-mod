@@ -60,6 +60,7 @@
       visibility: visible;
       position: absolute;
   }
+  /* Navigation Menu & Panels */
   #site-nav > ul > li {
       border-left: none;
       left: -9px;
@@ -69,8 +70,8 @@
       border: none;
       box-shadow: none;
   }
-  /* White block */
-  .menu-nav>ul>li:hover:after {
+   /* Menu Panel White block covering lower area of triangle and helping keep the mouse on hover */
+  .menu-nav > ul > li:hover:after {
       content: "";
       width: 200px;
       z-index: 62;
@@ -82,6 +83,7 @@
       top: 18px;
       left: 1px;
   }
+   /* Menu Panel */
   .menu-nav > ul > li > ul {
       background-color: #fff;
       border: none;
@@ -89,6 +91,7 @@
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
       top: 25px;
   }
+   /* Menu Panel trinagle */
   .menu-nav > ul > li > ul:after {
       content: "";
       display: block;
@@ -112,6 +115,27 @@
       top: 314px;
       left: -1px;
   }
+  
+    
+  /* Top Menu */
+  /*seperator */
+  #aux-nav>ul>li:not(:first-child):before {
+	   background:linear-gradient(to bottom,transparent 0%, transparent 20%, #fff 20%, #fff 80%, transparent 80%);
+  }
+  /* Other Applications Menu Arrow */
+  #aux-nav > ul > li > a::after {
+    display: none;
+}
+  /* Other Applications Panel trinagle position*/
+  #aux-nav.menu-nav > ul > li > ul:after {
+      left: auto;
+      right: 15px;
+  }
+  /* Other Applications Panel white block position*/
+  #aux-nav.menu-nav > ul > li:hover:after {
+      top: 24px;
+      left: -65px;
+  }
 
 
 
@@ -129,6 +153,12 @@
       background-image: url("https://addons.cdn.mozilla.net/static/img/icons/go-arrow.png?ad8fa66"),linear-gradient(#6FBF4A, #6FBF4A);
       border-radius: 0;
       box-shadow: none;
+  }
+  
+  
+  
+  .site-balloon {
+      display: none !important;
   }
 
 
