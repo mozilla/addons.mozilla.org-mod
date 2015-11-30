@@ -13,13 +13,41 @@
       line-height: 1.5;
       color: #333;
       background: #FFF none repeat scroll 0% 0%;
+      min-width: 1018px;
   }
 
+  /* Main Content Wraper - 
+     Background blue-pattern, blue-gradient, white overlay 
+     (to get a sharp-cut edge at 429px) */
   #main-wrapper {
       border-top: 2px solid #FFF;
       background-color: #0C99D5;
-      background-image: linear-gradient(to bottom, rgba(12, 153, 213, 0)0px, rgba(12, 153, 213, 0) 100px, #0C99D5 429px, #fff 429px, #fff 2000px), repeating-linear-gradient(118deg, rgba(12, 153, 213, 0) 0px,#00A7E0 550px, rgba(12, 153, 213, 0) 550px, #00A7E0 800px, rgba(12, 153,213, 0) 800px, #00A7E0 950px);
-  }
+      background-image: 
+        linear-gradient( 
+        to bottom, 
+        rgba(255, 255, 255, 1) 0px, 
+        rgba(255, 255, 255, 0) 100px
+      ),
+      linear-gradient( 
+        to bottom, 
+        rgba( 12, 153, 213, 0) 0px, 
+        rgba( 12, 153, 213, 1) 430px, 
+        rgba(255, 255, 255, 1) 430px 
+      ),
+      repeating-linear-gradient(
+        118deg, 
+        rgba(12, 153, 213, 0) 0px, 
+        #00A7E0 550px, 
+        rgba(12, 153, 213, 0) 550px, 
+        #00A7E0 800px, 
+        rgba(12, 153,213, 0) 800px, 
+        #00A7E0 950px 
+      );
+      background-position:
+        0px 429px,
+        0px 0px,
+        0px 0px;
+   }
   .amo-header {
       font-family: inherit;
   }
@@ -237,7 +265,29 @@
   }
 
 
+  /* Featured/Monthly Add-on Carousel Element */
+  /* move icon to the left */
+  #featured-addon .wrap > div, 
+  #monthly .wrap > div {
+      display: block;
+  }
+  #featured-addon .blurb, 
+  #featured-addon .thumb, 
+  #monthly .blurb, 
+  #monthly .thumb {
+      display: block;
+  }
+  #featured-addon .blurb, 
+  #monthly .blurb {
+      max-width: 80%;
+      float: right;
+  }
+  #featured-addon .thumb, 
+  #monthly .thumb {
+      float: left;
+  }
 
+  /*  */
   #featured-addon > div, #go-mobile > div, #monthly > div, .addons li > a {
       border: 0;
       border-radius: 0;
