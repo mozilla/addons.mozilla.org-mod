@@ -31,8 +31,8 @@
       linear-gradient( 
         to bottom, 
         rgba( 12, 153, 213, 0) 0px, 
-        rgba( 12, 153, 213, 1) 430px, 
-        rgba(255, 255, 255, 1) 430px 
+        rgba( 12, 153, 213, 1) 416px, 
+        rgba(255, 255, 255, 1) 416px 
       ),
       repeating-linear-gradient(
         118deg, 
@@ -44,7 +44,7 @@
         #00A7E0 950px 
       );
       background-position:
-        0px 429px,
+        0px 416px,
         0px 0px,
         0px 0px;
    }
@@ -196,6 +196,7 @@
       height: 271px !important;
       min-height: 271px !important;
       margin-left: -210px;
+      margin-bottom: 15px;
       visibility: visible !important;
       display: block !important;
       opacity: 1 !important;
@@ -331,6 +332,12 @@
       max-height: 1.2rem;
       font-weight: 200;
       text-align: left;
+      padding-bottom: 5px;
+  }
+  .addons li > a:active h3, 
+  .addons li > a:focus h3,
+  .addons li > a:hover h3 {
+    text-decoration: none;
   }
   #featured-addon h3 a, #monthly h3 a {
       color: #fff;
@@ -343,12 +350,36 @@
       text-overflow: ellipsis;
       clear: both;
   }
+    
+    
+  /* Install Button */
+  .button, 
+  button,
+  input[type="submit"] {
+   /* font: 700 13px/1em "Trebuchet MS",sans-serif;*/
+    font-family: inherit;
+    background: #5784BF;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0px none;
+  }
+  .button.add, 
+  .button.good, 
+  button.good {
+    background: #489615;
+  }
+  .button.selected,
+  .button:active,
+  .button:focus,
+  .button:hover {
+    box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.2) inset;
+  }
 
 
 
   #side-nav {
       /* pushed down to make room for more header */
-      margin-top: 301px;
+      margin-top: 286px;
   }
 
 
