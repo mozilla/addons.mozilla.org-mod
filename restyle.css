@@ -16,12 +16,21 @@
       min-width: 1018px;
   }
 
-  /* Main Content Wraper - 
-     Background blue-pattern, blue-gradient, white overlay 
-     (to get a sharp-cut edge at 429px) */
+  h1 {
+      font-family: "Open Sans",X-LocaleSpecific,sans-serif !important;
+      font-style: normal;
+      font-size: 2.25rem;
+  }
+
+  /* Main Content Wraper */
   #main-wrapper {
       border-top: 2px solid #FFF;
       background-color: #0C99D5;
+  }
+  /* Main Content Wraper Background - General
+     blue-pattern, blue-gradient, white overlay 
+     (sharp-cut at 130px) */
+  #main-wrapper {
       background-image: 
         linear-gradient( 
         to bottom, 
@@ -31,8 +40,39 @@
       linear-gradient( 
         to bottom, 
         rgba( 12, 153, 213, 0) 0px, 
-        rgba( 12, 153, 213, 1) 416px, 
-        rgba(255, 255, 255, 1) 416px 
+        rgba( 12, 153, 213, 1) 131px, 
+        rgba(255, 255, 255, 1) 131px 
+      ),
+      repeating-linear-gradient(
+        118deg, 
+        rgba(12, 153, 213, 0) 0px, 
+        #00A7E0 550px, 
+        rgba(12, 153, 213, 0) 550px, 
+        #00A7E0 800px, 
+        rgba(12, 153,213, 0) 800px, 
+        #00A7E0 950px 
+      );
+      background-position:
+        0px 130px,
+        0px 0px,
+        0px 0px;
+   } 
+   /* Main Content Wraper Background  - Home and Add-on Details page
+   blue-pattern, blue-gradient, white overlay 
+   (sharp-cut at 416px) */
+  .home #main-wrapper,
+  .addon-details #main-wrapper {
+      background-image: 
+        linear-gradient( 
+        to bottom, 
+        rgba(255, 255, 255, 1) 0px, 
+        rgba(255, 255, 255, 0) 100px
+      ),
+      linear-gradient( 
+        to bottom, 
+        rgba( 12, 153, 213, 0) 0px, 
+        rgba( 12, 153, 213, 1) 417px, 
+        rgba(255, 255, 255, 1) 417px 
       ),
       repeating-linear-gradient(
         118deg, 
@@ -47,7 +87,14 @@
         0px 416px,
         0px 0px,
         0px 0px;
-   }
+  }
+  /* hide overflow to cover streching of bg in 
+     .addon-details .primary:first-of-type:before */
+  .addon-details #main-wrapper {
+      overflow: hidden;
+  }
+    
+    
   .amo-header {
       font-family: inherit;
   }
@@ -55,7 +102,8 @@
       font-size: 0.75rem;
       color: #fff;
   }
-  .menu-nav a {
+  .menu-nav a,
+  .amo-header ul a {
       color: #fff;
   }
   #masthead h1 {
@@ -93,7 +141,12 @@
       border-left: none;
       left: -9px;
   }
-  .menu-nav > ul > li > a , .menu-nav > ul > li:hover > a {
+  #aux-nav,
+  #site-nav {
+      line-height: inherit;
+  }
+  .menu-nav > ul > li > a , 
+  .menu-nav > ul > li:hover > a {
       background: none;
       border: none;
       box-shadow: none;
@@ -351,6 +404,12 @@
       clear: both;
   }
     
+  /* Side nav on Home */ 
+  .home #side-nav {
+      /* pushed down to make room for more header */
+      margin-top: 286px;
+  }
+    
     
   /* Install Button */
   .button, 
@@ -373,13 +432,6 @@
   .button:focus,
   .button:hover {
     box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.2) inset;
-  }
-
-
-
-  #side-nav {
-      /* pushed down to make room for more header */
-      margin-top: 286px;
   }
 
 
@@ -415,4 +467,39 @@
       font-family: inherit;
       font-style: normal;
   }
+
+
+  /* Add-on Details Page */
+  #breadcrumbs {
+      display: none;
+  }
+  .addon-details .primary, 
+  .addon-details .secondary {
+      font-family: "Open Sans",X-LocaleSpecific,sans-serif !important;
+  }
+
+  #addon h1 {
+      color: #fff;
+  }
+  .version-number {
+      color: #ccc;
+      font-size: .5em;
+  }
+    
+  .addon-details .primary:first-of-type:before {
+      content: "";
+      display: block;
+      width: 150vw;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: -50vw;
+      background-image: linear-gradient( to bottom, rgba( 12, 153, 213, 0) 0%, rgba( 12, 153, 213, 1) 50% );
+  }
+   .addon-details .secondary.addon-vitals {
+       position: relative;
+       z-index: 1;
+   }
+
 }
