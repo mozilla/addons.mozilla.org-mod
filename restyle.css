@@ -190,14 +190,15 @@
       color: #000;
   }
   #site-nav #themes ul.two-col {
+      padding: 8px;
       height: 270px;
   }
   #site-nav #themes ul.two-col + div {
+      display: none;
       top: 314px;
       left: -1px;
   }
-  
-    
+
   /* Top Menu */
   /*seperator */
   #aux-nav>ul>li:not(:first-child):before {
