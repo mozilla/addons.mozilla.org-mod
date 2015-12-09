@@ -1,11 +1,18 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document domain("addons.mozilla.org") {
-
+    
+  /* Hide outlines Firefox shows on every click */
+  * {
+      outline: none;
+  }
+  
+  /* */
   #tabzilla:before {
       background: none;
   }
-
+    
+  /* */
   body {
       font-family: "Open Sans",X-LocaleSpecific,sans-serif !important;
       font-style: normal;
@@ -486,7 +493,10 @@
       color: #ccc;
       font-size: .5em;
   }
-    
+
+  .addon-details .primary:first-of-type{
+      padding-bottom: 1em;
+  }    
   .addon-details .primary:first-of-type:before {
       content: "";
       display: block;
@@ -502,5 +512,17 @@
        position: relative;
        z-index: 1;
    }
+
+
+/* Notice - underneath description (asking for contribution or  )*/
+.notice {
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    border-top: 1px solid #CCD6E3;
+    background: 0;
+
+
+}
 
 }
