@@ -205,11 +205,12 @@
       top: 314px;
       left: -1px;
   }
-
+  
+    
   /* Top Menu */
   /*seperator */
   #aux-nav>ul>li:not(:first-child):before {
-	   background:linear-gradient(to bottom,transparent 0%, transparent 20%, #fff 20%, #fff 80%, transparent 80%);
+     background:linear-gradient(to bottom,transparent 0%, transparent 20%, #fff 20%, #fff 80%, transparent 80%);
   }
   /* Other Applications Menu Arrow */
   #aux-nav > ul > li > a::after {
@@ -476,8 +477,10 @@
       font-style: normal;
   }
 
-
+    
+  /* --------------------*/
   /* Add-on Details Page */
+  /* --------------------*/
   #breadcrumbs {
       display: none;
   }
@@ -493,10 +496,12 @@
       color: #ccc;
       font-size: .5em;
   }
-
+  /* first block of details - icon, name, description ... */
   .addon-details .primary:first-of-type{
-      padding-bottom: 1em;
+      padding-bottom: 1em; /* */
+      min-height: 257px; /* make sure it is at least as high as the background extends down */
   }    
+  /* hack to extend background blue to the bottom of this block, even if it is higher than the background-blue - breaks if content is too high*/
   .addon-details .primary:first-of-type:before {
       content: "";
       display: block;
@@ -508,21 +513,46 @@
       left: -50vw;
       background-image: linear-gradient( to bottom, rgba( 12, 153, 213, 0) 0%, rgba( 12, 153, 213, 1) 50% );
   }
-   .addon-details .secondary.addon-vitals {
+  /* move elements in front of the background hack */
+  .addon-details .primary .notice, 
+  .addon-details .secondary.addon-vitals {
        position: relative;
        z-index: 1;
-   }
-
-
-/* Notice - underneath description (asking for contribution or  )*/
-.notice {
-    border-radius: 0;
-    box-shadow: none;
-    border: 0;
-    border-top: 1px solid #CCD6E3;
-    background: 0;
-
-
-}
+  }
+    
+  /* Notice - underneath description (asking for contribution &/or showing dependencies )*/
+  .addon-details .primary .notice {
+      border-radius: 0;
+      box-shadow: none;
+      border: 0;
+      border-top: 1px solid #CCD6E3;
+      background: 0;
+  }
+  
+  /* modify dependency to show "add to firefox" button and hide overlay */
+  /* make hovercard hide discription and always show "add to firefox" */
+  .addon-details .primary .notice.dependencies {
+      height: 130px;
+  }
+  .addon-details .primary .notice .hovercard.addon:hover,
+  .addon-details .primary .notice .hovercard.addon:hover:before,
+  .addon-details .primary .notice .hovercard.addon:hover .icon,
+  .addon-details .primary .notice .hovercard.addon:hover .summary,
+  .addon-details .primary .notice .hovercard.addon:hover .more {
+      background: none;
+      border-color: transparent;
+      box-shadow: none;
+  }
+  .addon-details .primary .notice .hovercard.addon:hover .summary {
+      height: 55px; /* keep fixed hight on hover */
+  } 
+  .addon-details .primary .notice .addon.hovercard .more {
+      display: block !important;
+  }
+  .addon-details .primary .notice .hovercard.addon .more .addon-summary,
+  .addon-details .primary .notice .hovercard.addon .more .byline,
+  .addon-details .primary .notice .hovercard.addon .more .vitals {
+      display: none;
+  }
 
 }
