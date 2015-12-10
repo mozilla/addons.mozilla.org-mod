@@ -505,7 +505,7 @@
   .addon-details .primary:first-of-type:before {
       content: "";
       display: block;
-      width: 150vw;
+      width: 400vw;
       height: 100%;
       position: absolute;
       z-index: 0;
