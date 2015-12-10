@@ -525,7 +525,7 @@
       border-radius: 0;
       box-shadow: none;
       border: 0;
-      border-top: 1px solid #CCD6E3;
+      border-top: 1px solid rgba(255,255,255,0.3);
       background: 0;
   }
   
@@ -552,6 +552,50 @@
   .addon-details .primary .notice .hovercard.addon .more .addon-summary,
   .addon-details .primary .notice .hovercard.addon .more .byline,
   .addon-details .primary .notice .hovercard.addon .more .vitals {
+      display: none;
+  }
+    
+  /* font issues on addon-details */
+  .addon-details .version-number,
+  .addon-details h4.author,
+  .addon-details h4.author a,
+  .addon-details #addon-summary,
+  .addon-details a.privacy-policy,
+  .addon-details .notice h3,
+  .addon-details .notice p,
+  .addon-details .notice p a,
+  .addon-details .notice p b,
+  .addon-details .category.more-info,
+  .addon-details .vital a,
+  .addon-details #reviews-link,
+  .addon-details #daily-users a {
+      color: #fff;
+  }
+  
+  .addon-details .version-number,
+  .addon-details h4.author,
+  .addon-details a.privacy-policy,
+  .addon-details #contribution.notice p a,
+  .addon-details .category.more-info,
+  .addon-details .vital a,
+  .addon-details #reviews-link,
+  .addon-details #daily-users a {
+      opacity: 0.4;
+  }
+    
+  .addon-details .version-number {
+      font-size: 0.39em;
+  }
+    
+  .addon-details .notice h3 {
+      font-style: normal;
+  }
+  
+  .addon-details .addon-vitals .stats {
+      background: none;
+  }
+    
+  .addon-details .widgets {
       display: none;
   }
 
