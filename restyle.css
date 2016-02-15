@@ -244,7 +244,23 @@
       border-radius: 0;
       box-shadow: none;
   }
-  
+  #site-search-suggestions ul li a {
+      color: #666;
+  }
+  #site-search-suggestions {
+      bottom: 5px;
+  }
+  #site-search-suggestions.visible {
+    bottom: -5px;
+  }
+  #site-search-suggestions .wrap {
+      border:none;
+      border-radius: 0;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+      z-index: 20;
+  }
+
+    
   
   
   .site-balloon {
@@ -598,5 +614,38 @@
   .addon-details .widgets {
       display: none;
   }
+    
+  /* Add-on Screenshots */
+  .addon-details .previews {
+      margin-top: 0;
+  }
 
+    
+    
+    
+    
+    
+    
+    /* Theme Homepage */
+    
+    .category-landing #featured-addons {
+        display: none;
+    }
+    
+    .category-landing .personas-featured h3 {
+        margin-top: 0;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
