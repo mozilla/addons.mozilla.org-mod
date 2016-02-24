@@ -1,6 +1,3 @@
-## work on this has been moved
-https://github.com/Nolski/olympia/blob/style-refresh/static/css/restyle.less
-
 # addons.mozilla.org-mod
 An attempt to refresh the looks of AMO.
 
